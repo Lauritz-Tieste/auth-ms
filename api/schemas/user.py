@@ -81,7 +81,7 @@ class UpdateUser(BaseModel):
     email: EmailStr | None = Field(None, description="Change the user's email address")
     email_verified: bool | None = Field(None, description="Change whether the user's email address is verified")
     password: str | None = Field(
-        regex=PASSWORD_REGEX, description="Change the password (if set to `null`, the password is removed)"
+        regex=PASSWORD_REGEX, description="Change the password (if set to the empty string, the password is removed)"
     )
     enabled: bool | None = Field(description="Change whether the user is enabled")
     admin: bool | None = Field(description="Change whether the user is an administrator")
